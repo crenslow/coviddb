@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <title>COVID-19 Fatigue Relief</title>
+  <body>
+    <header>
+      <h1 class="col-sm-12">COVID-19 Fatigue Relief</h1>
+      <div class="col-sm-12" id="message">
+        A Collection of Stats and Resources to Help Us Through
+      </div>
+      <hr id="hr" />
+    </header>
+
+    <div id="tophalf" class="row">
+      <div class="col-sm-2" id="mhtable">
+        <div style="text-shadow: 1px 1px 2px #80a1afc4" class="col-">
+          <h3>Mental Health Resources</h3>
+        </div>
+        <div class="col-">
+          <a
+            href="https://www.verywellmind.com/best-online-help-for-depression-4691259"
+            >-List of The Best Online Therapy Services</a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://www.nimh.nih.gov/health/find-help/"
+            >-National Institute of Mental Health</a
+          >
+        </div>
+        <div class="col-">
+          <a
+            href="https://www.nami.org/Your-Journey/Identity-and-Cultural-Dimensions/LGBTQI"
+            >-LGBTQI Mental Health Help</a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://www.nami.org/Your-Journey/Veterans-Active-Duty"
+            >-Veteran Mental Health Help</a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://www.samhsa.gov/find-help/national-helpline"
+            >-Substance Abuse Help</a
+          >
+        </div>
+        <div
+          style="text-shadow: 1px 1px 2px #80a1afc4; padding-top: 5px"
+          class="col-"
+        >
+          <h3>COVID-19 Resources</h3>
+        </div>
+        <div class="col-">
+          <a
+            href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/testing.html"
+            >- COVID-19 Testing Resources</a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://clinicaltrials.gov/ct2/who_table"
+            >- COVID-19 Scientifc Research</a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://www.raps.org/news-and-articles/news-articles/2020/3/covid-19-therapeutics-tracker"
+            >- Availible COVID-19 Therapeutics </a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://www.worldometers.info/coronavirus/"
+            >- Detailed COVID-19 Stats (Caution)</a
+          >
+        </div>
+      </div>
+
+      <div id="reddit" class="col-4">
+        <h3 style="color: white; text-shadow: 1px 1px 2px #0a7cadc4">
+          All-Uplifting News Feed
+        </h3>
+        <table style="width: 100%">
+          <tr>
+            <td>
+              <a id="entry2" href="">Loading...</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a id="entry3" href="">Loading..</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a id="entry4" href="">Loading..</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a id="entry5" href="">Loading..</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a id="entry6" href="">Loading..</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a id="entry7" href="">Loading..</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                id="entry8"
+                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/vsafe.html"
+                >Loading..</a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="graphgroup" class="col-6">
+        <canvas id="big"></canvas>
+      </div>
+    </div>
+
+    <div class="row" id="midhalf">
+      <div class="col-sm-2" id="other">
+        <div style="text-shadow: 1px 1px 2px #80a1afc4" class="col-"><h3>Other Resources</h3></div>
+        <div class="col-">
+          <a
+            href="https://thisissand.com/"
+            >-Soothing Sand Toy</a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://www.nimh.nih.gov/health/find-help/"
+            >-Relaxing Sound Creator</a
+          >
+        </div>
+        <div class="col-">
+          <a href="https://www.radioart.com/"
+            >-Internet Radio with Relaxing Sounds</a
+          >
+        </div>
+      </div>
+      <div class="col-4">
+        <h3 style="color: white; text-shadow: 1px 1px 2px #0a7cadc4">
+          COVID-19 Vaccine Information
+        </h3>
+        <table style="width: 100%">
+          <tr>
+            <td>
+              <a href="https://www.vaccines.gov/search/">Vaccine Finder</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a
+                href="https://www.cdc.gov/vaccines/covid-19/effectiveness-research/protocols.html"
+                >COVID-19 Vaccine Effectiveness Research</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/vsafe.html"
+                >After Vaccine Monitoring App</a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="stats" class="col-6">
+        <div class="row">
+          <div class="col-4">
+            <div id="stats1">
+              <p>Vaccinations Completed</p>
+              <p id="vacper"></p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div id="stats2">
+              <p>Vaccinations Started</p>
+              <p id="vacstart"></p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div id="stats3">
+              <p>Vaccines Administered</p>
+              <p id="vacadmin"></p>
+            </div>
+          </div>
+          <div class="row">
+            <p id="herd">About 75% needed for herd immunity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row"></div>
+  </body>
+</html>
+
+<script>
+  async function getCOVIDdata() {
+    let response = await fetch(
+      "https://api.covidactnow.org/v2/country/US.timeseries.json?apiKey=0685195219c445dcba09cb3a94eea556"
+    );
+    let data = await response.json();
+    return data;
+  }
+  var dates = [];
+  var percents = [];
+  var percents2 = [];
+  function useData() {
+    var rv;
+    var graphdata = [];
+    rv = getCOVIDdata();
+
+    rv.then((value) => {
+      var vacper = value.metrics.vaccinationsCompletedRatio;
+      var vacstart = value.metrics.vaccinationsInitiatedRatio;
+      var vacadmin = value.actuals.vaccinesAdministered;
+
+      document.getElementById("vacper").innerText =
+        "~" + vacper.toString()[2] + vacper.toString()[3] + "%";
+      document.getElementById("vacstart").innerText =
+        "~" + vacstart.toString()[2] + vacstart.toString()[3] + "%";
+      document.getElementById("vacadmin").innerText =
+        "~" +
+        vacadmin.toString()[0] +
+        vacadmin.toString()[1] +
+        vacadmin.toString()[2] +
+        " million";
+
+      var days = value.metricsTimeseries.length;
+
+      for (let i = 328; i < days; i++) {
+        if (
+          value.metricsTimeseries[i].vaccinationsCompletedRatio &&
+          value.metricsTimeseries[i].date &&
+          i % 2 != 0
+        ) {
+          dates.push(value.metricsTimeseries[i].date.toString());
+
+          percents.push(value.metricsTimeseries[i].vaccinationsCompletedRatio);
+          percents2.push(value.metricsTimeseries[i].vaccinationsInitiatedRatio);
+        }
+      }
+
+      linechart = new Chart(document.getElementById("big"), {
+        type: "line",
+        data: {
+          labels: dates,
+          datasets: [
+            {
+              data: percents,
+              label: "% of Population Vaccinated",
+              borderColor: "white",
+              pointBackgroundColor: "wheat",
+              fill: false,
+            },
+            {
+              data: percents2,
+              label: "% of Population Half-Vaccinated",
+              borderColor: "black",
+              pointBackgroundColor: "gray",
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+
+          legend: {
+            labels: {
+              fontColor: "black",
+            },
+          },
+          title: {
+            display: true,
+            fontColor: "black",
+            text: "COVID Vaccinations Status",
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                  fontColor: "black",
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Percent Vaccinated",
+                  fontColor: "black",
+                },
+              },
+            ],
+            xAxes: [
+              {
+                ticks: {
+                  fontColor: "black",
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: "Time",
+                  fontColor: "black",
+                },
+              },
+            ],
+          },
+        },
+      });
+    });
+  }
+  async function getredditdata() {
+    fetch("https://www.reddit.com/r/upliftingnews/hot.json")
+      .then(function (res) {
+        return res.json(); // Convert the data into JSON
+      })
+      .then(function (data) {
+        for (let i = 2; i < 9; i++) {
+          console.log(data);
+          $(document).ready(function () {
+            $("#entry" + i.toString(10)).prop(
+              "href",
+              data.data.children[i].data.url
+            );
+            document.getElementById("entry" + i.toString(10)).innerHTML =
+              data.data.children[i].data.title;
+            console.log(data.data.children[i].data.url);
+          });
+        }
+      })
+      .catch(function (err) {
+        console.log(err); // Log error if any
+      });
+  }
+  getredditdata();
+  useData();
+</script>
