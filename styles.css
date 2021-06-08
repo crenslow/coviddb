@@ -4,19 +4,18 @@ body {
   font-family: "Cabin", sans-serif;
   background-image: url("raimond-klavins-gmxGONiOPqY-unsplash.jpg");
   background-repeat: no-repeat;
-  
 }
 
 @media (min-width: 650px) {
-    body {
-        background-size: 250%;
-    }
+  body {
+    background-size: 250%;
   }
+}
 @media (min-width: 1000px) {
-    body {
-        background-size: 120%;
-    }
+  body {
+    background-size: 120%;
   }
+}
 h1,
 #message {
   margin-left: 5px;
@@ -78,7 +77,8 @@ header {
   padding-right: 25px;
   margin-top: 10px;
 }
-#mhtable, #other {
+#mhtable,
+#other {
   box-shadow: 1px 1px 3px #ffa368;
   background-color: #0a7cadc4;
   border-radius: 15px;
@@ -98,7 +98,6 @@ td {
   -ms-transition: background-color 0.2s linear;
   -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
-  
 }
 td > a {
   text-shadow: 1px 1px 1px#16475cc4;
@@ -111,11 +110,11 @@ td:hover {
 td > a:hover {
   color: #ffc4a0;
 }
-td{
-    padding-bottom: 5px;
-    padding-top: 5px;
+td {
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
-footer{
+footer {
   color: white;
   padding-top: 150px;
   position: absolute;
