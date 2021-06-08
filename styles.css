@@ -4,12 +4,17 @@ body {
   font-family: "Cabin", sans-serif;
   background-image: url("raimond-klavins-gmxGONiOPqY-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: 160%;
+  
 }
 
-  @media only screen and (min-width: 650px) {
+@media (min-width: 650px) {
     body {
         background-size: 250%;
+    }
+  }
+@media (min-width: 1000px) {
+    body {
+        background-size: 120%;
     }
   }
 h1,
@@ -109,4 +114,11 @@ td > a:hover {
 td{
     padding-bottom: 5px;
     padding-top: 5px;
+}
+footer{
+  color: white;
+  padding-top: 150px;
+  position: absolute;
+  text-shadow: 1px 1px 5px #0a7cadc4;
+  text-align: center;
 }
